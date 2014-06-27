@@ -41,19 +41,19 @@ AVAudioPlayer *_backgroundAudioPlayer;
         
         if ([gameMechanics GetActiveLevel] == 1){
             boulderScale = 0.35;
-            speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 3 : 6;
+            speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 6 : 7;
         } else if ([gameMechanics GetActiveLevel] == 2){
             boulderScale = 0.4;
-                        speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 8 : 4;
+                        speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 8 : 6;
         } else if ([gameMechanics GetActiveLevel] == 3){
             boulderScale = 0.45;
                         speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 10 : 5;
         } else if ([gameMechanics GetActiveLevel] == 4){
             boulderScale = 0.5;
-                        speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 12 : 6;
+                        speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 12 : 4;
         } else if ([gameMechanics GetActiveLevel] == 5){
             boulderScale = 0.55;
-                        speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 14 : 7;
+                        speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 14 : 3;
         } 
         
         lifeSpeed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 3 : 1;
