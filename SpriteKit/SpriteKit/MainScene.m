@@ -7,9 +7,7 @@
 //
 
 #import "MainScene.h"
-#import "MyScene.h"
-#import "CreditScene.h"
-#import "HelpScene.h"
+
 
 @implementation MainScene
 
@@ -26,6 +24,7 @@
         [self createHelpButton];
         [self createCreditsButton];
         [self createLeaderboardButton];
+        [self createAchievementButton];
         [self createHighscoreButton];
     }
     return self;
@@ -43,35 +42,41 @@
 // create Play button
 - (void) createPlayButton {
     self.playButton = [SKSpriteNode spriteNodeWithImageNamed:@"play"];
-    self.playButton.position = (CGPoint) {CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)};
+    self.playButton.position = (CGPoint) {CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)+self.playButton.size.height};
     [self addChild:self.playButton];
+}
+
+
+-(void)createLeaderboardButton{
+    self.leaderBoardButton = [SKSpriteNode spriteNodeWithImageNamed:@"leaderboard"];
+    self.leaderBoardButton.position = (CGPoint) {CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - self.leaderBoardButton.frame.size.height/2};
+    [self addChild:self.leaderBoardButton];
+}
+
+-(void)createAchievementButton{
+    self.achievementButton = [SKSpriteNode spriteNodeWithImageNamed:@"achievement"];
+    self.achievementButton.position = (CGPoint) {CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - self.achievementButton.frame.size.height * 2};
+    [self addChild:self.achievementButton];
+}
+
+-(void)createHighscoreButton{
+    self.highScore = [SKSpriteNode spriteNodeWithImageNamed:@"highScore"];
+    self.highScore.position = (CGPoint) {CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)-self.highScore.frame.size.height*3.5};;
+    [self addChild:self.highScore];
 }
 
 // create help button
 -(void)createHelpButton {
     self.helpButton = [SKSpriteNode spriteNodeWithImageNamed:@"howTo"];
-    self.helpButton.position = (CGPoint) {CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)-self.helpButton.frame.size.height*2};
+    self.helpButton.position = (CGPoint) {CGRectGetMidX(self.frame)+self.helpButton.size.width*0.6, CGRectGetMidY(self.frame)-self.helpButton.frame.size.height * 5};
     [self addChild:self.helpButton];
 }
 
 // create credits button
 -(void) createCreditsButton {
     self.creditsButton = [SKSpriteNode spriteNodeWithImageNamed:@"credits"];
-    self.creditsButton.position = (CGPoint) {CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - self.creditsButton.frame.size.height*3.6};
+    self.creditsButton.position = (CGPoint) {CGRectGetMidX(self.frame)-self.creditsButton.size.width*0.6, CGRectGetMidY(self.frame) - self.creditsButton.frame.size.height * 5};
     [self addChild:self.creditsButton];
-}
-
-
--(void)createLeaderboardButton{
-    self.leaderBoardButton = [SKSpriteNode spriteNodeWithImageNamed:@"leaderboard"];
-    self.leaderBoardButton.position = (CGPoint) {CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) - self.creditsButton.frame.size.height*5.2};
-    [self addChild:self.leaderBoardButton];
-}
-
--(void)createHighscoreButton{
-    self.highScore = [SKSpriteNode spriteNodeWithImageNamed:@"highScore"];
-    self.highScore.position = (CGPoint){CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)-self.highScore.frame.size.height*6.8};
-    [self addChild:self.highScore];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -171,6 +176,24 @@
             [self.scene.view presentScene:highScoresScene transition:reveal];
         }];
     } // End Credits button pressed
+    
+    
+    // Check if the Highscore button is tapped
+    else if (CGRectContainsPoint(self.achievementButton.frame, positionInScene))
+    {
+#ifdef DEBUG
+        NSLog(@"leaderboard button tapped");
+#endif
+        
+        // Set an action to the button
+        [self.achievementButton runAction:[SKAction sequence:@[[SKAction moveByX:0 y:-2 duration:0.1f], [SKAction moveByX:0 y:2 duration:0.1f]]] completion:^{
+            
+            SKTransition *reveal = [SKTransition fadeWithDuration:.5f];
+            Achievement *achievement = [[Achievement alloc] initWithSize:self.size];
+            [self.scene.view presentScene:achievement transition:reveal];
+        }];
+    } // End Credits button pressed
+
     
 }
 

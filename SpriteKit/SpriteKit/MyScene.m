@@ -39,37 +39,22 @@ AVAudioPlayer *_backgroundAudioPlayer;
         
         scoreRequired = 10*[gameMechanics GetActiveLevel];
         
-        if ([gameMechanics GetActiveLevel] == 1) {
-            boulderScale = 0.3;
-            speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 4 : 4;
-        } else if ([gameMechanics GetActiveLevel] == 2){
+        if ([gameMechanics GetActiveLevel] == 1){
             boulderScale = 0.35;
-            speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 6 : 3;
-        } else if ([gameMechanics GetActiveLevel] == 3){
+            speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 3 : 6;
+        } else if ([gameMechanics GetActiveLevel] == 2){
             boulderScale = 0.4;
                         speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 8 : 4;
-        } else if ([gameMechanics GetActiveLevel] == 4){
+        } else if ([gameMechanics GetActiveLevel] == 3){
             boulderScale = 0.45;
                         speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 10 : 5;
-        } else if ([gameMechanics GetActiveLevel] == 5){
+        } else if ([gameMechanics GetActiveLevel] == 4){
             boulderScale = 0.5;
                         speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 12 : 6;
-        } else if ([gameMechanics GetActiveLevel] == 6){
+        } else if ([gameMechanics GetActiveLevel] == 5){
             boulderScale = 0.55;
                         speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 14 : 7;
-        } else if ([gameMechanics GetActiveLevel] == 7){
-            boulderScale = 0.6;
-                        speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 16 : 7;
-        } else if ([gameMechanics GetActiveLevel] == 8){
-            boulderScale = 0.65;
-                        speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 18 : 8;
-        } else if ([gameMechanics GetActiveLevel] == 9){
-            boulderScale = 0.7;
-                        speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 20 : 8;
-        } else if ([gameMechanics GetActiveLevel] == 10){
-            boulderScale = 0.75;
-                        speed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 22 : 8;
-        }
+        } 
         
         lifeSpeed = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 3 : 1;
         score=0;
@@ -218,7 +203,7 @@ AVAudioPlayer *_backgroundAudioPlayer;
     
     //Set the location to an actual position
     player.position =((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?
-                      CGPointMake(160,100):
+                      CGPointMake(160,110):
                       CGPointMake(80, 50));
     //Giving the Character a name
     player.name =@"character";
@@ -302,20 +287,50 @@ AVAudioPlayer *_backgroundAudioPlayer;
     //Set up the shadow location
     SKSpriteNode *shadow = [SKSpriteNode spriteNodeWithImageNamed:@"shadow"];
     shadow.position = ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?
-                       CGPointMake(CGRectGetMaxX(self.frame)+80, 50) : CGPointMake(CGRectGetMaxX(self.frame)+40, 23));
+                       CGPointMake(CGRectGetMaxX(self.frame)+80, 40) : CGPointMake(CGRectGetMaxX(self.frame)+40, 23));
     //     shadow.position = CGPointMake(startPoint.x, startPoint.y-122);
     shadow.name = @"shadow";
     
     //stretching the item by 1.5
-    shadow.xScale= 1 ;
+    
+    if ([gameMechanics GetActiveLevel]==1) {
+        shadow.xScale= 0.6 ;
+    } else if ([gameMechanics GetActiveLevel]==2){
+        shadow.xScale= 0.7 ;
+
+    } else if ([gameMechanics GetActiveLevel]==3){
+        shadow.xScale= 0.8 ;
+    }else if ([gameMechanics GetActiveLevel]==4){
+        shadow.xScale= 0.9 ;
+    }else if ([gameMechanics GetActiveLevel]==4){
+        shadow.xScale= 1 ;
+    }
+
     //    shadow.zPosition = 1;
     
     //add the shadow to the board
     [self addChild:shadow];
     
+    
     SKSpriteNode *boulder = [SKSpriteNode spriteNodeWithImageNamed:@"boulder"];
+    
+    if ([gameMechanics GetActiveLevel]==1) {
+        boulder.position = ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?
+                            CGPointMake(CGRectGetMaxX(self.frame)+80, 65) : CGPointMake(CGRectGetMaxX(self.frame)+40, 40));
+    } else if ([gameMechanics GetActiveLevel]==2){
     boulder.position = ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?
-                        CGPointMake(CGRectGetMaxX(self.frame)+80, 94) : CGPointMake(CGRectGetMaxX(self.frame)+40, 45));
+                        CGPointMake(CGRectGetMaxX(self.frame)+80, 67) : CGPointMake(CGRectGetMaxX(self.frame)+40, 45));
+    } else if ([gameMechanics GetActiveLevel]==3){
+        boulder.position = ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?
+                            CGPointMake(CGRectGetMaxX(self.frame)+80, 70) : CGPointMake(CGRectGetMaxX(self.frame)+40, 50));
+    }else if ([gameMechanics GetActiveLevel]==4){
+        boulder.position = ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?
+                            CGPointMake(CGRectGetMaxX(self.frame)+80, 74) : CGPointMake(CGRectGetMaxX(self.frame)+40, 55));
+    }else if ([gameMechanics GetActiveLevel]==5){
+        boulder.position = ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?
+                            CGPointMake(CGRectGetMaxX(self.frame)+80, 80) : CGPointMake(CGRectGetMaxX(self.frame)+40, 60));
+    }
+
     
     //    boulder.position = CGPointMake(startPoint.x, startPoint.y-90);
     boulder.name = @"boulder";
@@ -622,6 +637,7 @@ AVAudioPlayer *_backgroundAudioPlayer;
 
 -(void)increamentScore{
     score++;
+    succssfulJump++;
     [scoreLabel setText:[NSString stringWithFormat:@"Score: %@", [NSNumber numberWithInteger:score]]];
     isScoreOn = NO;
     if (score==scoreRequired) {
@@ -630,7 +646,8 @@ AVAudioPlayer *_backgroundAudioPlayer;
 }
 
 -(void)gameWon{
-    WinScene *gameWin = [[WinScene alloc] initWithSize:self.size win:score];
+    
+    WinScene *gameWin = [[WinScene alloc] initWithSize:self.size win:score life:lifeLost jump:succssfulJump];
     SKTransition *flip = [SKTransition flipHorizontalWithDuration:0.5f];
     [self.view presentScene:gameWin transition:flip];
     
@@ -694,6 +711,7 @@ AVAudioPlayer *_backgroundAudioPlayer;
     
     //adding a +1 on the hitcount
     life--;
+    lifeLost++;
     if (life==0) {
         [lifeImage1 setAlpha:0.0f];
         [lifeImage2 setAlpha:0.0f];
@@ -775,6 +793,10 @@ AVAudioPlayer *_backgroundAudioPlayer;
 -(void) gameOver{
     
     NSLog(@"GAME OVER");
+    
+    if (succssfulJump<=0 && lifeLost >=3 && ![gameMechanics getMedal:@"special3"]) {
+        [gameMechanics setMedal:YES :@"special3"];
+    }
     
     //Play the new Scene
     GameOver *game = [[GameOver alloc] initWithSize:self.size lose:score];

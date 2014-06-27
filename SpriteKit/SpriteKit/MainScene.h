@@ -10,6 +10,10 @@
 #import "GameCenterManager.h"
 #import "LocalHighScores.h"
 #import "GameMechanics.h"
+#import "MyScene.h"
+#import "CreditScene.h"
+#import "HelpScene.h"
+#import "Achievement.h"
 
 @interface MainScene : SKScene{
     GameMechanics * gameMechanics;
@@ -20,6 +24,7 @@
 @property (nonatomic,retain) SKSpriteNode *helpButton;
 
 @property (nonatomic,retain) SKSpriteNode *leaderBoardButton;
+@property (nonatomic,retain) SKSpriteNode *achievementButton;
 
 @property (nonatomic,retain) SKSpriteNode *creditsButton;
 @property (nonatomic,retain) SKSpriteNode *highScore;

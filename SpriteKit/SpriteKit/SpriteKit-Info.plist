@@ -37,6 +37,8 @@
 	<string>Qwik Jump</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSMainNibFile~ipad</key>
+	<string>Main-iPad</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Hobo.ttf</string>

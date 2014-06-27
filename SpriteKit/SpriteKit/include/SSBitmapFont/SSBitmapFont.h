@@ -1,9 +1,6 @@
 //
-//  BitmapFontNode.h
-//  SSBitmapFontLabel
-//
-//  Created by Mike Daley on 23/10/2013.
-//  Copyright (c) 2013 71Squared. All rights reserved.
+//  Created by DANIEL ANNIS on 5/28/14.
+//  Copyright (c) 2014 Dinky_Details. All rights reserved.
 //
 
 #import <SpriteKit/SpriteKit.h>

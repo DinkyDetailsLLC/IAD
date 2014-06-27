@@ -12,7 +12,7 @@
 AVAudioPlayer *_backgroundAudioPlayer;
 
 
--(id)initWithSize:(CGSize)size win:(NSInteger)score{
+-(id)initWithSize:(CGSize)size win:(NSInteger)score life:(int)lostLife jump:(int)successfulJump{
     [self startBackgroundMusic];
     if (self = [super initWithSize:size]) {
         
@@ -34,27 +34,35 @@ AVAudioPlayer *_backgroundAudioPlayer;
             [[GameCenterManager sharedManager]saveAndReportScore:[gameMechanics getTotalScore]+score
                                                      leaderboard:@"qleaderboard1"
                                                        sortOrder:GameCenterSortOrderHighToLow];
-        }
-        
-//
-        if ([gameMechanics getTotalScore]+score >= 50 && ![gameMechanics getMedal:@"bronze"]) {
-            [gameMechanics setMedal:YES :@"bronze"];
-        }
-        
-        if ([gameMechanics getTotalScore]+score >= 100 && ![gameMechanics getMedal:@"silver"]) {
-            [gameMechanics setMedal:YES :@"silver"];
-        }
-        
-        if ([gameMechanics getTotalScore]+score >= 150 && ![gameMechanics getMedal:@"gold"]) {
-            [gameMechanics setMedal:YES :@"gold"];
-        }
-        
-        if ([gameMechanics getTotalScore]+score >= 300 && ![gameMechanics getMedal:@"platinum"]) {
-            [gameMechanics setMedal:YES :@"platinum"];
-        }
-        
-        if ([gameMechanics getTotalScore]+score >= 450 && ![gameMechanics getMedal:@"diamond"]) {
-            [gameMechanics setMedal:YES :@"diamond"];
+            
+            if ([gameMechanics GetActiveLevel]==1 && lostLife <=0 && ![gameMechanics getMedal:@"special1"]) {
+                [gameMechanics setMedal:YES :@"special1"];
+            }
+            
+            if ([gameMechanics GetActiveLevel]==2 && lostLife <=0 && ![gameMechanics getMedal:@"special2"]) {
+                [gameMechanics setMedal:YES :@"special2"];
+            }
+
+            if ([gameMechanics GetActiveLevel] == 1 && ![gameMechanics getMedal:@"bronze"]) {
+                [gameMechanics setMedal:YES :@"bronze"];
+            }
+            
+            if ([gameMechanics GetActiveLevel] == 2 && ![gameMechanics getMedal:@"silver"]) {
+                [gameMechanics setMedal:YES :@"silver"];
+            }
+            
+            if ([gameMechanics GetActiveLevel] == 3 && ![gameMechanics getMedal:@"gold"]) {
+                [gameMechanics setMedal:YES :@"gold"];
+            }
+            
+            if ([gameMechanics GetActiveLevel] == 4 && ![gameMechanics getMedal:@"platinum"]) {
+                [gameMechanics setMedal:YES :@"platinum"];
+            }
+            
+            if ([gameMechanics GetActiveLevel] == 5 && ![gameMechanics getMedal:@"diamond"]) {
+                [gameMechanics setMedal:YES :@"diamond"];
+            }
+
         }
         
         
@@ -120,6 +128,7 @@ AVAudioPlayer *_backgroundAudioPlayer;
     [self addChild:next];
 }
 
+
 -(void)createShareButton{
     share = [SKSpriteNode spriteNodeWithImageNamed:@"share"];
     share.position = ((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ?
@@ -178,7 +187,7 @@ AVAudioPlayer *_backgroundAudioPlayer;
         [next runAction:[SKAction sequence:@[[SKAction moveByX:0 y:-2 duration:0.1f], [SKAction moveByX:0 y:2 duration:0.1]]]completion:^{
             [gameMechanics addTotalScore:tmpScore];
 
-            if ([gameMechanics GetActiveLevel]!=10) {
+            if ([gameMechanics GetActiveLevel]!=5) {
                 SKTransition *reveal = [SKTransition fadeWithDuration:.5f];
                 MyScene *gameScene = [[MyScene alloc] initWithSize:self.size :([gameMechanics GetActiveLevel]+1)];
                 [self.scene.view presentScene:gameScene transition:reveal];
@@ -217,7 +226,6 @@ AVAudioPlayer *_backgroundAudioPlayer;
     [_backgroundAudioPlayer setVolume:.5];
     [_backgroundAudioPlayer play];
 }
-
 
 
 - (SSBitmapFont *)bitmapFontForFile:(NSString *)filename
@@ -294,93 +302,4 @@ AVAudioPlayer *_backgroundAudioPlayer;
     }
     return params;
 }
-    
-//-(void)onShareButtonTap{
-//    if (FBSession.activeSession.isOpen) {
-//        
-//        // Yes, we are open, so lets make a request for user details so we can get the user name.
-//        
-//        [self promptUserWithAccountNameForStatusUpdate];
-//        
-//        
-//        
-//    } else {
-//        
-//        // We don't have an active session in this app, so lets open a new facebook session with the appropriate permissions!
-//        
-//        // Firstly, construct a permission array. you can find more "permissions strings" at http://developers.facebook.com/docs/authentication/permissions/
-//        
-//        NSArray *permissions = [[NSArray alloc] initWithObjects:
-//                                @"publish_actions",
-//                                nil];
-//        // OPEN Session!
-//        [FBSession openActiveSessionWithPublishPermissions:permissions defaultAudience:FBSessionDefaultAudienceEveryone allowLoginUI:YES completionHandler:^(FBSession *session,
-//                                                                                                                                                             FBSessionState status,
-//                                                                                                                                                             NSError *error) {
-//            // if login fails for any reason, we alert
-//            if (error) {
-//                
-//                // show error to user.
-//                
-//            } else if (FB_ISSESSIONOPENWITHSTATE(status)) {
-//                
-//                // no error, so we proceed with requesting user details of current facebook session.
-//                
-//                [self promptUserWithAccountNameForStatusUpdate];
-//            }
-//        }];
-//    }
-//}
-//
-//-(void)promptUserWithAccountNameForStatusUpdate {
-//    //    [self controlStatusUsable:NO];
-//    [[FBRequest requestForMe] startWithCompletionHandler:
-//     ^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
-//         if (!error) {
-//             
-//             UIAlertView *tmp = [[UIAlertView alloc]
-//                                 initWithTitle:@"Publish to FB?"
-//                                 message:[NSString stringWithFormat:@"Publish status to ""%@"" Account?", user.name]
-//                                 delegate:self
-//                                 cancelButtonTitle:nil
-//                                 otherButtonTitles:@"No",@"Yes", nil];
-//             tmp.tag = 200; // to update status
-//             [tmp show];
-//         }
-//     }];
-//}
-//
-//-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-//    
-//    if (buttonIndex==1) { // yes answer
-//        if (alertView.tag==200) {
-//            // the post status
-//            
-//            [FBRequestConnection startForPostStatusUpdate:statusText completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-//                if (!error) {
-//                    UIAlertView *tmp = [[UIAlertView alloc]
-//                                        initWithTitle:@"Success"
-//                                        message:@"Status Posted"
-//                                        delegate:self
-//                                        cancelButtonTitle:nil
-//                                        otherButtonTitles:@"Ok", nil];
-//                    
-//                    [tmp show];
-//                    
-//                } else {
-//                    UIAlertView *tmp = [[UIAlertView alloc]
-//                                        initWithTitle:@"Error"
-//                                        message:@"Some error happened"
-//                                        delegate:self
-//                                        cancelButtonTitle:nil
-//                                        otherButtonTitles:@"Ok", nil];
-//                    
-//                    [tmp show];
-//                }
-//            }];
-//        }
-//        
-//    }
-//    
-//}
 @end

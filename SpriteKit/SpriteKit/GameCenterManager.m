@@ -1,9 +1,8 @@
 //
 //  GameCenterManager.m
 //
-//
-//  Created by DANIEL ANNIS on 5/29/14.
-//  Copyright (c) 2014 Dinky_Details. All rights reserved.
+//  Created by Nihal Ahmed on 12-03-16. Updated by iRare Media on 5-27-13.
+//  Copyright (c) 2012 NABZ Software. All rights reserved.
 //
 
 #import "GameCenterManager.h"

@@ -31,21 +31,22 @@
 		15C53BE71936CE7A0029DD21 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C53BE61936CE7A0029DD21 /* MainScene.m */; };
 		15C53BEA1936D1920029DD21 /* CreditScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C53BE91936D1920029DD21 /* CreditScene.m */; };
 		15C53BED1936D46F0029DD21 /* HelpScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C53BEC1936D46F0029DD21 /* HelpScene.m */; };
-		15E77EB619381AF0005628C2 /* ScorePanelFont.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 15E77EAC19381AF0005628C2 /* ScorePanelFont.atlas */; };
 		15E77EB719381AF0005628C2 /* libSSBitmapFont.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E77EAD19381AF0005628C2 /* libSSBitmapFont.a */; };
-		15E77EB819381AF0005628C2 /* ScorePanelFont.skf in Resources */ = {isa = PBXBuildFile; fileRef = 15E77EB219381AF0005628C2 /* ScorePanelFont.skf */; };
-		15E77EB919381AF0005628C2 /* ScorePanelFont@2x.skf in Resources */ = {isa = PBXBuildFile; fileRef = 15E77EB319381AF0005628C2 /* ScorePanelFont@2x.skf */; };
-		15E77EBA19381AF0005628C2 /* ScorePanelFont@2x~ipad.skf in Resources */ = {isa = PBXBuildFile; fileRef = 15E77EB419381AF0005628C2 /* ScorePanelFont@2x~ipad.skf */; };
-		15E77EBB19381AF0005628C2 /* ScorePanelFont@2x~iphone.skf in Resources */ = {isa = PBXBuildFile; fileRef = 15E77EB519381AF0005628C2 /* ScorePanelFont@2x~iphone.skf */; };
-		15E77EC319381B92005628C2 /* hobo.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 15E77EBE19381B92005628C2 /* hobo.atlas */; };
-		15E77EC419381B92005628C2 /* hobo.skf in Resources */ = {isa = PBXBuildFile; fileRef = 15E77EBF19381B92005628C2 /* hobo.skf */; };
-		15E77EC519381B92005628C2 /* hobo@2x.skf in Resources */ = {isa = PBXBuildFile; fileRef = 15E77EC019381B92005628C2 /* hobo@2x.skf */; };
-		15E77EC619381B92005628C2 /* hobo@2x~ipad.skf in Resources */ = {isa = PBXBuildFile; fileRef = 15E77EC119381B92005628C2 /* hobo@2x~ipad.skf */; };
-		15E77EC719381B92005628C2 /* hobo@2x~iphone.skf in Resources */ = {isa = PBXBuildFile; fileRef = 15E77EC219381B92005628C2 /* hobo@2x~iphone.skf */; };
 		15E77ECA19381BD3005628C2 /* NSTimer+Pausing.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E77EC919381BD3005628C2 /* NSTimer+Pausing.m */; };
 		15E77ECD19381C37005628C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15E77ECB19381C37005628C2 /* Main.storyboard */; };
 		15E77ED019381D2A005628C2 /* WinScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E77ECF19381D2A005628C2 /* WinScene.m */; };
 		2D39C8AF1948BE7B0080DB86 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D39C8AE1948BE7B0080DB86 /* FacebookSDK.framework */; };
+		2D4E9B8D195C7AC400E2EF33 /* ScorePanelFont.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D4E9B88195C7AC400E2EF33 /* ScorePanelFont.atlas */; };
+		2D4E9B8E195C7AC400E2EF33 /* ScorePanelFont.skf in Resources */ = {isa = PBXBuildFile; fileRef = 2D4E9B89195C7AC400E2EF33 /* ScorePanelFont.skf */; };
+		2D4E9B8F195C7AC400E2EF33 /* ScorePanelFont@2x.skf in Resources */ = {isa = PBXBuildFile; fileRef = 2D4E9B8A195C7AC400E2EF33 /* ScorePanelFont@2x.skf */; };
+		2D4E9B90195C7AC400E2EF33 /* ScorePanelFont@2x~ipad.skf in Resources */ = {isa = PBXBuildFile; fileRef = 2D4E9B8B195C7AC400E2EF33 /* ScorePanelFont@2x~ipad.skf */; };
+		2D4E9B91195C7AC400E2EF33 /* ScorePanelFont@2x~iphone.skf in Resources */ = {isa = PBXBuildFile; fileRef = 2D4E9B8C195C7AC400E2EF33 /* ScorePanelFont@2x~iphone.skf */; };
+		2D4E9B97195C8A4800E2EF33 /* Achievement.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E9B96195C8A4800E2EF33 /* Achievement.m */; };
+		2D4E9BF9195CCD9900E2EF33 /* hobo.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2D4E9BF4195CCD9900E2EF33 /* hobo.atlas */; };
+		2D4E9BFA195CCD9900E2EF33 /* hobo.skf in Resources */ = {isa = PBXBuildFile; fileRef = 2D4E9BF5195CCD9900E2EF33 /* hobo.skf */; };
+		2D4E9BFB195CCD9900E2EF33 /* hobo@2x.skf in Resources */ = {isa = PBXBuildFile; fileRef = 2D4E9BF6195CCD9900E2EF33 /* hobo@2x.skf */; };
+		2D4E9BFC195CCD9900E2EF33 /* hobo@2x~ipad.skf in Resources */ = {isa = PBXBuildFile; fileRef = 2D4E9BF7195CCD9900E2EF33 /* hobo@2x~ipad.skf */; };
+		2D4E9BFD195CCD9900E2EF33 /* hobo@2x~iphone.skf in Resources */ = {isa = PBXBuildFile; fileRef = 2D4E9BF8195CCD9900E2EF33 /* hobo@2x~iphone.skf */; };
 		2D63534C1949AEFF00B95681 /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6353471949AEFF00B95681 /* GameCenterManager.m */; };
 		2D63534D1949AEFF00B95681 /* NSDataAES256.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6353491949AEFF00B95681 /* NSDataAES256.m */; };
 		2D63534E1949AEFF00B95681 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63534B1949AEFF00B95681 /* Reachability.m */; };
@@ -101,25 +102,27 @@
 		15C53BE91936D1920029DD21 /* CreditScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditScene.m; sourceTree = "<group>"; };
 		15C53BEB1936D46E0029DD21 /* HelpScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpScene.h; sourceTree = "<group>"; };
 		15C53BEC1936D46F0029DD21 /* HelpScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpScene.m; sourceTree = "<group>"; };
-		15E77EAC19381AF0005628C2 /* ScorePanelFont.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ScorePanelFont.atlas; sourceTree = "<group>"; };
 		15E77EAD19381AF0005628C2 /* libSSBitmapFont.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSSBitmapFont.a; sourceTree = "<group>"; };
 		15E77EB019381AF0005628C2 /* SSBitmapFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSBitmapFont.h; sourceTree = "<group>"; };
 		15E77EB119381AF0005628C2 /* SSBitmapFontLabelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSBitmapFontLabelNode.h; sourceTree = "<group>"; };
-		15E77EB219381AF0005628C2 /* ScorePanelFont.skf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ScorePanelFont.skf; sourceTree = "<group>"; };
-		15E77EB319381AF0005628C2 /* ScorePanelFont@2x.skf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScorePanelFont@2x.skf"; sourceTree = "<group>"; };
-		15E77EB419381AF0005628C2 /* ScorePanelFont@2x~ipad.skf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScorePanelFont@2x~ipad.skf"; sourceTree = "<group>"; };
-		15E77EB519381AF0005628C2 /* ScorePanelFont@2x~iphone.skf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScorePanelFont@2x~iphone.skf"; sourceTree = "<group>"; };
-		15E77EBE19381B92005628C2 /* hobo.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = hobo.atlas; sourceTree = "<group>"; };
-		15E77EBF19381B92005628C2 /* hobo.skf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hobo.skf; sourceTree = "<group>"; };
-		15E77EC019381B92005628C2 /* hobo@2x.skf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hobo@2x.skf"; sourceTree = "<group>"; };
-		15E77EC119381B92005628C2 /* hobo@2x~ipad.skf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hobo@2x~ipad.skf"; sourceTree = "<group>"; };
-		15E77EC219381B92005628C2 /* hobo@2x~iphone.skf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hobo@2x~iphone.skf"; sourceTree = "<group>"; };
 		15E77EC819381BD3005628C2 /* NSTimer+Pausing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Pausing.h"; sourceTree = "<group>"; };
 		15E77EC919381BD3005628C2 /* NSTimer+Pausing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Pausing.m"; sourceTree = "<group>"; };
 		15E77ECC19381C37005628C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15E77ECE19381D2A005628C2 /* WinScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinScene.h; sourceTree = "<group>"; };
 		15E77ECF19381D2A005628C2 /* WinScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinScene.m; sourceTree = "<group>"; };
 		2D39C8AE1948BE7B0080DB86 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		2D4E9B88195C7AC400E2EF33 /* ScorePanelFont.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ScorePanelFont.atlas; sourceTree = "<group>"; };
+		2D4E9B89195C7AC400E2EF33 /* ScorePanelFont.skf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ScorePanelFont.skf; sourceTree = "<group>"; };
+		2D4E9B8A195C7AC400E2EF33 /* ScorePanelFont@2x.skf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScorePanelFont@2x.skf"; sourceTree = "<group>"; };
+		2D4E9B8B195C7AC400E2EF33 /* ScorePanelFont@2x~ipad.skf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScorePanelFont@2x~ipad.skf"; sourceTree = "<group>"; };
+		2D4E9B8C195C7AC400E2EF33 /* ScorePanelFont@2x~iphone.skf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ScorePanelFont@2x~iphone.skf"; sourceTree = "<group>"; };
+		2D4E9B95195C8A4800E2EF33 /* Achievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Achievement.h; path = ../Achievement.h; sourceTree = "<group>"; };
+		2D4E9B96195C8A4800E2EF33 /* Achievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Achievement.m; path = ../Achievement.m; sourceTree = "<group>"; };
+		2D4E9BF4195CCD9900E2EF33 /* hobo.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = hobo.atlas; sourceTree = "<group>"; };
+		2D4E9BF5195CCD9900E2EF33 /* hobo.skf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hobo.skf; sourceTree = "<group>"; };
+		2D4E9BF6195CCD9900E2EF33 /* hobo@2x.skf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hobo@2x.skf"; sourceTree = "<group>"; };
+		2D4E9BF7195CCD9900E2EF33 /* hobo@2x~ipad.skf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hobo@2x~ipad.skf"; sourceTree = "<group>"; };
+		2D4E9BF8195CCD9900E2EF33 /* hobo@2x~iphone.skf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hobo@2x~iphone.skf"; sourceTree = "<group>"; };
 		2D6353461949AEFF00B95681 /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenterManager.h; sourceTree = "<group>"; };
 		2D6353471949AEFF00B95681 /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterManager.m; sourceTree = "<group>"; };
 		2D6353481949AEFF00B95681 /* NSDataAES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAES256.h; sourceTree = "<group>"; };
@@ -205,26 +208,7 @@
 			children = (
 				15E77ECB19381C37005628C2 /* Main.storyboard */,
 				15414FF7191B1EC6005A1ACB /* character.atlas */,
-				15A0B6A7191B0CDD005D3A77 /* AppDelegate.h */,
-				15A0B6A8191B0CDE005D3A77 /* AppDelegate.m */,
-				15A0B6AD191B0CDE005D3A77 /* ViewController.h */,
-				15A0B6AE191B0CDE005D3A77 /* ViewController.m */,
-				15C53BE51936CE7A0029DD21 /* MainScene.h */,
-				15C53BE61936CE7A0029DD21 /* MainScene.m */,
-				15C53BE81936D1920029DD21 /* CreditScene.h */,
-				15C53BE91936D1920029DD21 /* CreditScene.m */,
-				15C53BEB1936D46E0029DD21 /* HelpScene.h */,
-				15C53BEC1936D46F0029DD21 /* HelpScene.m */,
-				15A0B6B0191B0CDE005D3A77 /* MyScene.h */,
-				15A0B6B1191B0CDE005D3A77 /* MyScene.m */,
-				15C53AEF191C79880029DD21 /* GameOver.h */,
-				15C53AF0191C79880029DD21 /* GameOver.m */,
-				15E77ECE19381D2A005628C2 /* WinScene.h */,
-				15E77ECF19381D2A005628C2 /* WinScene.m */,
-				2D8D7D5E19496CFB0061A906 /* GameMechanics.h */,
-				2D8D7D5F19496CFB0061A906 /* GameMechanics.m */,
-				2D8D7D79194999C40061A906 /* LocalHighScores.h */,
-				2D8D7D7A194999C40061A906 /* LocalHighScores.m */,
+				2D4E9B87195C7A8400E2EF33 /* Classes */,
 				2D6353531949B16400B95681 /* GameCenter */,
 				15A0B6B5191B0CDE005D3A77 /* Images.xcassets */,
 				15E77EBD19381B6A005628C2 /* Fonts */,
@@ -298,18 +282,47 @@
 		15E77EBD19381B6A005628C2 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				15E77EBE19381B92005628C2 /* hobo.atlas */,
-				15E77EBF19381B92005628C2 /* hobo.skf */,
-				15E77EC019381B92005628C2 /* hobo@2x.skf */,
-				15E77EC119381B92005628C2 /* hobo@2x~ipad.skf */,
-				15E77EC219381B92005628C2 /* hobo@2x~iphone.skf */,
-				15E77EAC19381AF0005628C2 /* ScorePanelFont.atlas */,
-				15E77EB219381AF0005628C2 /* ScorePanelFont.skf */,
-				15E77EB319381AF0005628C2 /* ScorePanelFont@2x.skf */,
-				15E77EB419381AF0005628C2 /* ScorePanelFont@2x~ipad.skf */,
-				15E77EB519381AF0005628C2 /* ScorePanelFont@2x~iphone.skf */,
+				2D4E9BF4195CCD9900E2EF33 /* hobo.atlas */,
+				2D4E9BF5195CCD9900E2EF33 /* hobo.skf */,
+				2D4E9BF6195CCD9900E2EF33 /* hobo@2x.skf */,
+				2D4E9BF7195CCD9900E2EF33 /* hobo@2x~ipad.skf */,
+				2D4E9BF8195CCD9900E2EF33 /* hobo@2x~iphone.skf */,
+				2D4E9B88195C7AC400E2EF33 /* ScorePanelFont.atlas */,
+				2D4E9B89195C7AC400E2EF33 /* ScorePanelFont.skf */,
+				2D4E9B8A195C7AC400E2EF33 /* ScorePanelFont@2x.skf */,
+				2D4E9B8B195C7AC400E2EF33 /* ScorePanelFont@2x~ipad.skf */,
+				2D4E9B8C195C7AC400E2EF33 /* ScorePanelFont@2x~iphone.skf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		2D4E9B87195C7A8400E2EF33 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				15A0B6A7191B0CDD005D3A77 /* AppDelegate.h */,
+				15A0B6A8191B0CDE005D3A77 /* AppDelegate.m */,
+				15A0B6AD191B0CDE005D3A77 /* ViewController.h */,
+				15A0B6AE191B0CDE005D3A77 /* ViewController.m */,
+				15C53BE51936CE7A0029DD21 /* MainScene.h */,
+				15C53BE61936CE7A0029DD21 /* MainScene.m */,
+				15C53BE81936D1920029DD21 /* CreditScene.h */,
+				15C53BE91936D1920029DD21 /* CreditScene.m */,
+				15C53BEB1936D46E0029DD21 /* HelpScene.h */,
+				15C53BEC1936D46F0029DD21 /* HelpScene.m */,
+				15A0B6B0191B0CDE005D3A77 /* MyScene.h */,
+				15A0B6B1191B0CDE005D3A77 /* MyScene.m */,
+				15C53AEF191C79880029DD21 /* GameOver.h */,
+				15C53AF0191C79880029DD21 /* GameOver.m */,
+				15E77ECE19381D2A005628C2 /* WinScene.h */,
+				15E77ECF19381D2A005628C2 /* WinScene.m */,
+				2D8D7D5E19496CFB0061A906 /* GameMechanics.h */,
+				2D8D7D5F19496CFB0061A906 /* GameMechanics.m */,
+				2D8D7D79194999C40061A906 /* LocalHighScores.h */,
+				2D8D7D7A194999C40061A906 /* LocalHighScores.m */,
+				2D4E9B95195C8A4800E2EF33 /* Achievement.h */,
+				2D4E9B96195C8A4800E2EF33 /* Achievement.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		2D6353531949B16400B95681 /* GameCenter */ = {
@@ -412,24 +425,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15E77EC619381B92005628C2 /* hobo@2x~ipad.skf in Resources */,
+				2D4E9B91195C7AC400E2EF33 /* ScorePanelFont@2x~iphone.skf in Resources */,
 				15C53AF3191C7F380029DD21 /* TempleFight.mp3 in Resources */,
 				15C53AEE191C79110029DD21 /* ow.mp3 in Resources */,
-				15E77EB619381AF0005628C2 /* ScorePanelFont.atlas in Resources */,
-				15E77EC319381B92005628C2 /* hobo.atlas in Resources */,
-				15E77EC519381B92005628C2 /* hobo@2x.skf in Resources */,
+				2D4E9B8D195C7AC400E2EF33 /* ScorePanelFont.atlas in Resources */,
 				15A0B6A3191B0CDD005D3A77 /* InfoPlist.strings in Resources */,
-				15E77EBB19381AF0005628C2 /* ScorePanelFont@2x~iphone.skf in Resources */,
+				2D4E9BF9195CCD9900E2EF33 /* hobo.atlas in Resources */,
+				2D4E9BFA195CCD9900E2EF33 /* hobo.skf in Resources */,
+				2D4E9B8F195C7AC400E2EF33 /* ScorePanelFont@2x.skf in Resources */,
+				2D4E9B90195C7AC400E2EF33 /* ScorePanelFont@2x~ipad.skf in Resources */,
 				15C53AF5191C811D0029DD21 /* Training-Mixed.mp3 in Resources */,
-				15E77EB819381AF0005628C2 /* ScorePanelFont.skf in Resources */,
-				15E77EB919381AF0005628C2 /* ScorePanelFont@2x.skf in Resources */,
 				15414FF8191B1EC6005A1ACB /* character.atlas in Resources */,
 				15A0B6B6191B0CDE005D3A77 /* Images.xcassets in Resources */,
 				15C53AF71925AB470029DD21 /* thump.mp3 in Resources */,
-				15E77EC419381B92005628C2 /* hobo.skf in Resources */,
 				15E77ECD19381C37005628C2 /* Main.storyboard in Resources */,
-				15E77EC719381B92005628C2 /* hobo@2x~iphone.skf in Resources */,
-				15E77EBA19381AF0005628C2 /* ScorePanelFont@2x~ipad.skf in Resources */,
+				2D4E9BFC195CCD9900E2EF33 /* hobo@2x~ipad.skf in Resources */,
+				2D4E9B8E195C7AC400E2EF33 /* ScorePanelFont.skf in Resources */,
+				2D4E9BFB195CCD9900E2EF33 /* hobo@2x.skf in Resources */,
+				2D4E9BFD195CCD9900E2EF33 /* hobo@2x~iphone.skf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D63534C1949AEFF00B95681 /* GameCenterManager.m in Sources */,
+				2D4E9B97195C8A4800E2EF33 /* Achievement.m in Sources */,
 				15A0B6B2191B0CDE005D3A77 /* MyScene.m in Sources */,
 				15E77ED019381D2A005628C2 /* WinScene.m in Sources */,
 				15C53AF1191C79880029DD21 /* GameOver.m in Sources */,
@@ -604,7 +618,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -631,7 +645,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

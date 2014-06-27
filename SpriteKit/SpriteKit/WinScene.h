@@ -34,6 +34,6 @@
     int tmpScore;
 }
 
--(id)initWithSize:(CGSize)size win: (NSInteger)score;
+-(id)initWithSize:(CGSize)size win: (NSInteger)score life:(int)lostLife jump:(int)successfulJump ;
 
 @end

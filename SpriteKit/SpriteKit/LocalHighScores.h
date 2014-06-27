@@ -2,7 +2,7 @@
 //  LocalHighScores.h
 //  SpriteKit
 //
-//  Created by DANIEL ANNIS on 5/29/14.
+//  Created by DANIEL ANNIS on 5/28/14.
 //  Copyright (c) 2014 Dinky_Details. All rights reserved.
 //
 
@@ -25,11 +25,6 @@
     SSBitmapFontLabelNode * localScoreLabel4;
     SSBitmapFontLabelNode * localScoreLabel5;
     
-    SKSpriteNode * bronze;
-    SKSpriteNode * silver;
-    SKSpriteNode * gold;
-    SKSpriteNode * platinum;
-    SKSpriteNode * diamond;
 
 }
 @property (nonatomic,retain) SKSpriteNode * backButton;

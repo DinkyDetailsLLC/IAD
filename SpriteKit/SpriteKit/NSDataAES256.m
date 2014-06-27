@@ -1,9 +1,6 @@
 //
 //  NSDataAES256.m
 //
-//  Created by DANIEL ANNIS on 5/29/14.
-//  Copyright (c) 2014 Dinky_Details. All rights reserved.
-//
 
 #import "NSDataAES256.h"
 #import <CommonCrypto/CommonCryptor.h>

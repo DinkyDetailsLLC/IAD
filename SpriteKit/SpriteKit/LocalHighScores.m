@@ -2,9 +2,10 @@
 //  LocalHighScores.m
 //  SpriteKit
 //
-//  Created by DANIEL ANNIS on 5/29/14.
+//  Created by DANIEL ANNIS on 5/28/14.
 //  Copyright (c) 2014 Dinky_Details. All rights reserved.
 //
+
 #import "LocalHighScores.h"
 
 @implementation LocalHighScores
@@ -15,83 +16,31 @@
         
         gameMechanics = [[GameMechanics alloc]init];
         
-        
-        bronze = [SKSpriteNode spriteNodeWithImageNamed:@"bronze"];
-        bronze.position =((UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad)? CGPointMake(100, CGRectGetMaxY(self.frame)-200) : CGPointMake(50, CGRectGetMaxY(self.frame)-100));
-        [bronze setScale:0.15];
-        
-        if (![gameMechanics getMedal:@"bronze"]) {
-            bronze.alpha = 0.1;
-        } else {
-            bronze.alpha = 1;
-        }
-        [self addChild:bronze];
-        
-        
-        silver = [SKSpriteNode spriteNodeWithImageNamed:@"silver"];
-        silver.position =((UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad)? CGPointMake(200, CGRectGetMaxY(self.frame)-200) : CGPointMake(100, CGRectGetMaxY(self.frame)-100));
-        [silver setScale:0.20];
-        if (![gameMechanics getMedal:@"silver"]) {
-            silver.alpha = 0.1;
-        } else {
-            silver.alpha = 1;}
-        [self addChild:silver];
-        
-        
-        gold = [SKSpriteNode spriteNodeWithImageNamed:@"gold"];
-        gold.position =((UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad)? CGPointMake(CGRectGetMidX(self.frame), CGRectGetMaxY(self.frame)-200) : CGPointMake(CGRectGetMidX(self.frame), CGRectGetMaxY(self.frame)-100));
-        [gold setScale:0.25];
-        if (![gameMechanics getMedal:@"gold"]) {
-            gold.alpha = 0.1;
-        } else {
-            gold.alpha = 1;}
-        [self addChild:gold];
-
-        
-        platinum = [SKSpriteNode spriteNodeWithImageNamed:@"platinum"];
-        platinum.position =((UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad)? CGPointMake(CGRectGetMaxX(self.frame)-200, CGRectGetMaxY(self.frame)-200) : CGPointMake(CGRectGetMaxX(self.frame)-100, CGRectGetMaxY(self.frame)-100));
-        [platinum setScale:0.20];
-        if (![gameMechanics getMedal:@"platinum"]) {
-            platinum.alpha = 0.1;
-        } else {
-            platinum.alpha = 1;}
-        [self addChild:platinum];
-
-        
-        diamond = [SKSpriteNode spriteNodeWithImageNamed:@"diamond"];
-        diamond.position =((UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad)? CGPointMake(CGRectGetMaxX(self.frame)-100, CGRectGetMaxY(self.frame)-200) : CGPointMake(CGRectGetMaxX(self.frame)-50, CGRectGetMaxY(self.frame)-100));
-        [diamond setScale:0.15];
-        if (![gameMechanics getMedal:@"diamond"]) {
-            diamond.alpha = 0.1;
-        } else {
-            diamond.alpha = 1;}
-        [self addChild:diamond];
-
-        
+                
         
         SSBitmapFont *bitmapFont = [self bitmapFontForFile:@"ScorePanelFont"];
 
         
-        localScoreLabel1 = [bitmapFont nodeFromString:[NSString stringWithFormat:@"Highscore: %d", [gameMechanics getLocalScore1]]];
+        localScoreLabel1 = [bitmapFont nodeFromString:[NSString stringWithFormat:@"Highscore 1: %d", [gameMechanics getLocalScore1]]];
         localScoreLabel1.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)+localScoreLabel1.size.height*3);
         [self addChild:localScoreLabel1];
         
         
-        localScoreLabel2 = [bitmapFont nodeFromString:[NSString stringWithFormat:@"Highscore: %d", [gameMechanics getLocalScore2]]];
+        localScoreLabel2 = [bitmapFont nodeFromString:[NSString stringWithFormat:@"Highscore 2: %d", [gameMechanics getLocalScore2]]];
         localScoreLabel2.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)+localScoreLabel2.size.height*1.5);
         [self addChild:localScoreLabel2];
         
-        localScoreLabel3 = [bitmapFont nodeFromString:[NSString stringWithFormat:@"Highscore: %d", [gameMechanics getLocalScore3]]];
+        localScoreLabel3 = [bitmapFont nodeFromString:[NSString stringWithFormat:@"Highscore 3: %d", [gameMechanics getLocalScore3]]];
         localScoreLabel3.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
         [self addChild:localScoreLabel3];
         
         
-        localScoreLabel4 = [bitmapFont nodeFromString:[NSString stringWithFormat:@"Highscore: %d", [gameMechanics getLocalScore4]]];
+        localScoreLabel4 = [bitmapFont nodeFromString:[NSString stringWithFormat:@"Highscore 4: %d", [gameMechanics getLocalScore4]]];
         localScoreLabel4.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)-localScoreLabel4.size.height*1.5);
         [self addChild:localScoreLabel4];
         
         
-        localScoreLabel5 = [bitmapFont nodeFromString:[NSString stringWithFormat:@"Highscore: %d", [gameMechanics getLocalScore5]]];
+        localScoreLabel5 = [bitmapFont nodeFromString:[NSString stringWithFormat:@"Highscore 5: %d", [gameMechanics getLocalScore5]]];
         localScoreLabel5.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)-localScoreLabel1.size.height*3);
         [self addChild:localScoreLabel5];
         
